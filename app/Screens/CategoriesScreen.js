@@ -11,6 +11,11 @@ import {
 import { connect } from 'react-redux';
 import * as Font from 'expo-font'
 import { LinearGradient } from 'expo-linear-gradient'
+
+import {CAT_GRAD_1, CAT_GRAD_2, CAT_HEAD_TEXT, UNDEFINED_VAR} from "@env"
+
+
+
 const { height } = Dimensions.get('window');
 
 import * as actions from '../actions';
@@ -29,14 +34,13 @@ class CategoriesScreen extends React.Component {
     });
 
     this.setState({ fontLoaded: true });
-    console.log(this.state.fontLoaded);
   }
 
   render() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
-        <LinearGradient colors={['#FFB199', '#FF0844']} style={styles.backgroundGradient}>
-          {this.state.fontLoaded ? <Text style={styles.header}>Shop by Category</Text> : null}
+        <LinearGradient colors={[CAT_GRAD_1, CAT_GRAD_2]} style={styles.backgroundGradient}>
+          {this.state.fontLoaded ? <Text style={styles.header}>{CAT_HEAD_TEXT}</Text> : null}
         </LinearGradient>
         <View style={styles.detailView}>
           <TouchableOpacity

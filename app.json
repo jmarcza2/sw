@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "macysExpress",
-    "slug": "macysExpress",
+    "name": "threedevswork",
+    "slug": "threedevswork",
+    "description": "three devs work",
     "privacy": "public",
     "platforms": [
       "ios",
